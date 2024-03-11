@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { View, Text, FlatList, StyleSheet } from "react-native";
-import { gogetProducts} from "./Services/ProductServices.js";
+import { gogetProducts} from "./Services/ProductServices"
 import {Products} from "./Components/Products.js"
 
 export function ProductList (){
@@ -8,7 +8,7 @@ export function ProductList (){
     function render ({item:Products}){
     return(
         <Products
-            {... Products}        
+            {... product}        
             onPress= {() => {
                 navigation. navigate('ProductDetails', {productId: product.id})
         
@@ -17,7 +17,7 @@ export function ProductList (){
         )
     }
 
-    const [Products, setProducts] =useState([]);
+    const [product, setProducts] =useState([]);
     useEffect(() => {
         setProducts(gogetProducts())
 
@@ -26,8 +26,8 @@ export function ProductList (){
 
         return (
             <FlatList
-                style={styles.ProductList} 
-                contentContainerStyle={styles.productsListContainer}
+                style={Styles.ProductList} 
+                contentContainerStyle={Styles.productsListContainer}
                 keyExtractor={(item) => item.id.toString()} 
                 data={Products}
                 renderItem={render}
@@ -37,11 +37,11 @@ export function ProductList (){
         )
     }
     
-const styles = StyleSheet.create({
+const Styles = StyleSheet.create({
     ProductList: {
         backgroundColor: "#eeeeee",
-    }
-    productsListContainer: {
+    },
+    ProductListContainer: {
         backgroundColor:"#eeeeee",
         paddingVertical:8,
         marginHorizontal:8,
