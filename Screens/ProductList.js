@@ -36,4 +36,17 @@ export function ProductList (){
 
         )
     }
+    
+const styles = StyleSheet.create({
+    ProductList: {
+        backgroundColor: "#eeeeee",
+    }
+    productsListContainer: {
+        backgroundColor:"#eeeeee",
+        paddingVertical:8,
+        marginHorizontal:8,
+
+    }
+
+});
 
