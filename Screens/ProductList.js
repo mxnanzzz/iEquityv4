@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { View, Text, FlatList, StyleSheet } from "react-native";
-import { gogetProducts} from "./Services/ProductServices"
-import {Products} from "./Components/Products.js"
+import { gogetProducts} from "../Services/ProductServices"
+import {Products} from "../Components/Products.js"
 
 export function ProductList (){
 
