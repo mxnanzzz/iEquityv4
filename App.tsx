@@ -3,6 +3,7 @@ import { StyleSheet} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { ProductList } from "./Screens/ProductList.js";
+import { ProductDeets } from "./Screens/ProductDeets.js";
 
 const Stack = createNativeStackNavigator();
 
@@ -11,6 +12,7 @@ function App () {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name="Products" component={ProductList}/> 
+                {/* <Stack.Screen name="ProductDetails" component={ProductDetails}/>   */}
             </Stack.Navigator>
         </NavigationContainer>
     )
